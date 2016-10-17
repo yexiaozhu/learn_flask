@@ -1,4 +1,4 @@
-#!/usr/bin/env python2.7.11
+#!/usr/bin/env python3.5
 # -*- coding=utf8 -*-
 
 from flask import Flask
@@ -8,7 +8,7 @@ app = Flask(__name__)
 def index():
 	return '<h1>Hello World!</h1>'
 
-@app.route('/user/<name>'）
+@app.route('/user/<name>')
 def user(name):
 	return '<h1>Hello, %s!</h1>' %name
 
