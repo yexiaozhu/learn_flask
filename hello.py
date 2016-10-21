@@ -9,7 +9,7 @@ from datetime import datetime
 from flask_wtf import Form
 from wtforms import StringField, SubmitField
 from wtforms.validators import DataRequired
-from flask.ext.sqlalchemy import SQLAlchemy
+from flask_sqlalchemy import SQLAlchemy
 
 
 basedir = os.path.abspath(os.path.dirname(__file__))
