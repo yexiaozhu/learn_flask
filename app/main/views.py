@@ -29,6 +29,7 @@ def index():
 @main.route('/user/<username>')
 def user(username):
     user = User.query.filter_by(username=username).first_or_404()
+    posts = user.posts.order_by(Post.timestamp.desc()).all
     return render_template('user.html', user=user)
 
 @main.route('/edit-profile', methods=['GET', 'POST'])
@@ -41,7 +42,7 @@ def edit_profile():
         current_user.about_me = form.about_me.data
         db.session.add(current_user)
         flash('Your profile has been updated.')
-        return render_template(url_for('.user', username=current_user.username))
+        return redirect(url_for('.user', username=current_user.username))
     form.name.data = current_user.name
     form.location.data = current_user.location
     form.about_me.data = current_user.about_me
