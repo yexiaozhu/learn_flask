@@ -221,7 +221,7 @@ class AnonymousUser(AnonymousUserMixin):
         return False
 
     def is_administrator(self):
-        return Falsep
+        return False
 
 login_manager.anonymous_user = AnonymousUser
 @login_manager.user_loader
