@@ -12,7 +12,6 @@ if os.environ.get('FLASK_COVERAGE'):
 import os
 from flask_script import Manager, Shell
 from flask_migrate import Migrate, MigrateCommand
-
 from app import db, create_app
 from app.models import Role, User, Permission, Post, Follow, Comment
 
