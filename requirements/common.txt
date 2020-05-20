@@ -38,7 +38,7 @@ friends==0.1
 greenlet==0.4.10
 html5lib==0.9999999
 http-parser==0.8.3
-httplib2==0.8
+httplib2==0.18.0
 idna==2.1
 imagesize==0.7.1
 ipykernel==4.5.0
